@@ -10,14 +10,14 @@ function LoginPage() {
 
 
   const handleGoogleLogin = () => {
-  window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+  window.location.href = 'https://agentesports-backend-api-dev.onrender.com/oauth2/authorization/google';
 };
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/login', {
+      const response = await axios.post('https://agentesports-backend-api-dev.onrender.com/api/auth/login', {
         username,
         password
       });
